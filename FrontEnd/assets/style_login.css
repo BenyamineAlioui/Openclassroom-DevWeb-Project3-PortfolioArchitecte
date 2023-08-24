@@ -1,0 +1,106 @@
+/* Log In */
+
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 10px
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+.insta{
+	height: 18px;
+	width: 18px;
+}
+
+.login {
+	margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	width: 40%;
+	height: 420px;
+	margin-bottom: 70px;
+}
+
+.login h1, .login input, .login button {
+	margin-bottom: 25px;
+}
+
+.login h1 {
+	font-family: 'Syne';
+    font-weight: 700;
+    font-size: 30px;
+    color: #1D6154;
+}
+
+.login label {
+	font: inherit;
+}
+
+.login input{
+	margin-top: 10px;
+    border: #FFFFFF;
+    box-shadow: 0px 4px 14px 0px #00000017;
+    height: 51px;
+    top: 338px;
+    left: 530px;
+    width: 379px
+}
+
+.login button{
+	width: 179px;
+	height: 36px;
+	top: 529px;
+	left: 630px;
+	border-radius: 60px;
+	border: none;
+	background-color: #1D6154;
+	color: white;
+}
+
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
