@@ -8,16 +8,34 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="script.js" defer></script>
 </head>
 <body>
+	<div class="test">
+		<div class="barre_modification">
+			<div class="modif_button">
+				<div class="first_modif">
+					<i class="fa-solid fa-pen-to-square fa-sm"></i>
+					<p>Mode édition</p>
+				</div>
+				<div class="second_modif">
+					<p>publier les changements</p>
+				</div>
+			</div>
+		</div>
+		<div class="test2"></div>
+	</div>
+<div class="body_sans_barremodif">
 <header>
 	<a href="index.html"><h1>Sophie Bluel <span>Architecte d'intérieur</span></h1></a>
 	<nav>
 		<ul>
-			<li>projets</li>
-			<li>contact</li>
+			<li><a href="#projets">projets</a></li>
+			<li><a href="#contact2">contact</a></li>
 			<li><a href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram" class="insta"></li>
 		</ul>
@@ -35,12 +53,17 @@
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
-	<section id="portfolio">
+	<section class="portfolio" id="projets">
 		<h2>Mes Projets</h2>
-		<div class="gallery">
+		<div class="filtres">
+			<div class="tous"><p>Tous</p></div>
+			<div class="objets"><p>Objets</p></div>
+			<div class="appartements"><p>Appartements</p></div>
+			<div class=" hotels"><p>Hotels & restaurants</p></div>
 		</div>
+		<div class="gallery"></div>
 	</section>
-	<section id="contact">
+	<section class="contact" id="contact2">
 		<h2>Contact</h2>
 		<p>Vous avez un projet ? Discutons-en !</p>
 		<form action="#" method="post">
@@ -62,5 +85,6 @@
 		</ul>
 	</nav>
 </footer>
+</div>
 </body>
 </html>

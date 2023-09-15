@@ -47,16 +47,68 @@ table {
 	border-spacing: 0;
 }
 /** end reset css**/
-body {
+.body_sans_barremodif {
 	max-width: 1140px;
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
+
+.barre_modification {
+	background-color: black;
+	height: 45px;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+
+.modif_button{
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	width: 25%;
+	padding-top: 9px;
+}
+
+.fa-solid{
+	color: white;
+	padding: 7px 3px;
+}
+
+.first_modif:hover > .fa-solid{
+	color: black;
+}
+
+.first_modif{
+	display: flex;
+	color: white;
+	padding: 5px 10px;
+}
+
+.first_modif:hover{
+	color: black;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.second_modif{
+	color: white;
+	padding: 5px 10px;
+}
+
+.second_modif:hover{
+	color: black;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 20px 0px 50px 0px;
 }
 section {
 	margin: 50px 0
@@ -127,10 +179,56 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
+.portfolio h2 {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+.test2{
+    height: 100%;
+}
+
+.test:hover > .test2 {
+    height: 80%;
+}
+
+.barre_modification {
+    transform: scaleY(0);
+}
+
+.test:hover > .barre_modification{
+    transform: scaleY(1);
+    transition: transform 500ms ;
+    transform-origin: top 50%;
+    height: 40px;
+}
+
+.filtres{
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+	width: 50%;
+}
+
+.filtres div {
+	color: #1D6154;
+	border: 1px solid #1D6154;
+	border-radius: 20px;
+	padding: 7px 20px;
+	margin-right:10px;
+}
+
+.filtres div:hover {
+	background-color: #1D6154;
+	color: white;
+	cursor: pointer;
+}
+
+.filtres div p {
+	font-family: 'Syne' ;
+}
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -143,34 +241,34 @@ li:hover {
 	width: 100%;
 
 }
-#contact {
+.contact {
 	width: 50%;
-margin: auto;
+	margin: auto;
 }
-#contact > * {
+.contact > * {
 	text-align: center;
 
 }
-#contact h2{
+.contact h2{
 	margin-bottom: 20px;
 }
-#contact form {
+.contact form {
 	text-align: left;
 	margin-top:30px;
 	display: flex;
 	flex-direction: column;
 }
 
-#contact input {
+.contact input {
 	height: 50px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-#contact label {
+.contact label {
 	margin: 2em 0 1em 0;
 }
-#contact textarea {
+.contact textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
