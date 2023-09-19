@@ -76,6 +76,23 @@ fetch("http://localhost:5678/api/works")
     console.error('Une erreur s\'est produite lors de la récupération des catégories : ', error);
   });
 
+  /* Login */
+
+  fetch("http://localhost:5678/api/users/login")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur de requête réseau');
+    }
+    return response.json();
+  })
+  .then(data => {
+    for (let i = 0; i < data.length; i++) {
+        let elements = data[i]
+    
+
+    } 
+  })
+
 
   
   
