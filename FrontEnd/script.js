@@ -12,7 +12,8 @@ fetch("http://localhost:5678/api/works")
         let elements = data[i]
     
         const gallery = document.querySelector (".gallery")
-        
+       
+
         /* Creation des elements */
         const project = document.createElement ("figure")
         const img = document.createElement ("img")
@@ -21,6 +22,7 @@ fetch("http://localhost:5678/api/works")
         imgTitle.innerText = elements.title
 
         gallery.appendChild(project)
+      
         project.appendChild(img)
         project.appendChild(imgTitle)
 
@@ -61,14 +63,6 @@ fetch("http://localhost:5678/api/works")
             project.style.display = 'block';
           }
         });
-
-        
-
-        // Mettre en surbrillance le filtre actif
-        filters.forEach(f => {
-          f.classList.remove('active');
-        });
-        filter.classList.add('active');
       });
     });
   })
@@ -76,9 +70,32 @@ fetch("http://localhost:5678/api/works")
     console.error('Une erreur s\'est produite lors de la récupération des catégories : ', error);
   });
 
-  /* Login */
+  //Affichage de la modale au clic des bouton modif
 
-  fetch("http://localhost:5678/api/users/login")
+  const buttonModif1 = document.querySelector('.modif_button');
+  const buttonModif2 = document.querySelector('.modif_button2');
+
+  buttonModif1.addEventListener('click', () => {
+      const modale = document.querySelector('.bground');
+      modale.style.display = 'block';
+  })
+
+  buttonModif2.addEventListener('click', () => {
+    const modale = document.querySelector('.bground');
+    modale.style.display = 'block';
+  })
+
+  //Fermeture de la modale au clic de la croix
+
+  const xmark = document.querySelector('.fa-xmark')
+
+  xmark.addEventListener('click', () => {
+    location.reload(true);
+  })
+
+  //Affichage des projets dans la modale
+
+  fetch("http://localhost:5678/api/works")
   .then(response => {
     if (!response.ok) {
       throw new Error('Erreur de requête réseau');
@@ -89,13 +106,68 @@ fetch("http://localhost:5678/api/works")
     for (let i = 0; i < data.length; i++) {
         let elements = data[i]
     
+        const galleryModale = document.querySelector (".project-modale")
 
+        /* Creation des elements */
+        const projectModale = document.createElement ("figure")
+        const img = document.createElement ("img")
+        img.src = elements.imageUrl
+        const imgTitle = document.createElement ("figcaption")
+        imgTitle.innerText = elements.title
+
+        galleryModale.appendChild(projectModale)
+        projectModale.appendChild(img)
+        projectModale.appendChild(imgTitle)
+
+        projectModale.classList.add("project");
+        projectModale.setAttribute("data-category", elements.category.name);
+
+        // Suppression des projets 
+
+        const corbeille = document.querySelector(".fa-trash-can")
+        projectModale.appendChild(corbeille)
     } 
   })
 
+// Gestion du mode "connecté" 
+
+  function isConnected() {
+    if (sessionStorage.getItem("token")) return true;
+    else return false;
+  }
+  
+ function EditionMode() {
+    
+    const modifbarre = document.querySelector(".barre_modification");
+    const login_Logout = document.querySelector(".login_logout");
+    const modifBtn2 = document.querySelector(".modif_button2");
+    const filters = document.querySelector(".filtres");
+    
+    if (isConnected() === true) {
+      login_Logout.innerText = "logout";
+      login_Logout.addEventListener("click", () => {
+        sessionStorage.removeItem("token");
+        window.location.replace("index.html");
+      });
+      modifbarre.style.display = 'block';
+      modifBtn2.style.display = 'block';
+      filters.style.display = 'none';
+    } 
+  }
+
+  EditionMode()
+
+// affichage de la modale2
+
+const boutonAjouter = document.querySelector(".button1")
+
+boutonAjouter.addEventListener('click', () => {
+  const modale = document.querySelector('.bground');
+  const modale2 = document.querySelector('.bground2');
+      modale.style.display = 'none';
+      modale2.style.display = 'block';
+})
+  
 
   
-  
-
-
 

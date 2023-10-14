@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style_login.css">
-    <script src="script.js" defer></script>
+    <script src="login.js" defer></script>
 </head>
 <body>
     <header>
@@ -24,18 +24,19 @@
     </header>
     <form class="login">
         <h1>Log In</h1>
-        <div>
+        <div >
             <label for="email">Email</label>
             <br>
-            <input type="email"> 
+            <input id="emailInput" type="email"> 
         </div>
-        <div>
+        <div >
             <label for="password">Mot de passe</label>
             <br>
-            <input type="password">
+            <input id="passwordInput" type="password">
         </div>
         
-        <button>Se connecter</button>
+        <input id="send-input" type="submit" value="Se connecter">
+        <p id="error-message" style="color: red;">Erreur dans l’identifiant ou le mot de passe</p>
         <a href="mdp-oublie.html">Mot de passe oublié</a>
     </form>
     <footer>

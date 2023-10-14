@@ -15,20 +15,50 @@
 	<script src="script.js" defer></script>
 </head>
 <body>
-	<div class="test">
-		<div class="barre_modification">
-			<div class="modif_button">
-				<div class="first_modif">
-					<i class="fa-solid fa-pen-to-square fa-sm"></i>
-					<p>Mode édition</p>
+<section class="bground">
+		<div class="modale">
+			<i class="fa-solid fa-xmark"></i>
+			<h3>Galerie photo</h3>
+			<div class="project-modale"><i class="fa-solid fa-trash-can"></i></div>
+			<button class="button1">
+				<p>Ajouter une photo</p>
+			</button>
+		</div>
+</section>
+<section class="bground2">
+		<div class="modale2">
+			<div class="blockModal2">
+				<i class="fa-solid fa-arrow-left"></i>
+				<i class="fa-solid fa-xmark"></i>
+				<h3>Ajout Photo</h3>
+				<div class="ajoutPhoto">
+					<i class="fa-regular fa-image fa-xl"></i>
+					<button class="button3"><p>+Ajouter photo</p></button>
+					<p>jpg. png : 4mo max</p>
 				</div>
-				<div class="second_modif">
-					<p>publier les changements</p>
-				</div>
+				<form action="#" method="post">
+					<label for="title">Titre</label>
+					<input type="text" name="title" id="title">
+					<label for="categories">Catégorie</label>
+					<select>
+						<option value="rien"></option>
+						<option value="objets">objets</option>
+						<option value="appartements">appartements</option>
+						<option value="hotels & restaurants">hotels & restaurants</option>
+					</select>
+					</form>
+				<button class="button2">
+					<p>Valider</p>
+				</button>
 			</div>
 		</div>
-		<div class="test2"></div>
+</section>
+<section class="barre_modification">
+	<div class="modif_button">
+		<i class="fa-solid fa-pen-to-square fa-sm"></i>
+		<p>Mode édition</p>
 	</div>
+</section>
 <div class="body_sans_barremodif">
 <header>
 	<a href="index.html"><h1>Sophie Bluel <span>Architecte d'intérieur</span></h1></a>
@@ -36,7 +66,7 @@
 		<ul>
 			<li><a href="#projets">projets</a></li>
 			<li><a href="#contact2">contact</a></li>
-			<li><a href="login.html">login</a></li>
+			<li class="login_logout"><a href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram" class="insta"></li>
 		</ul>
 	</nav>
@@ -54,7 +84,15 @@
 		</article>
 	</section>
 	<section class="portfolio" id="projets">
-		<h2>Mes Projets</h2>
+		<div class="project_header">
+			<h2>Mes Projets</h2>
+			<div class="modif_button2">
+				<div class="flexBtn">
+					<i class="fa-solid fa-pen-to-square fa-sm"></i>
+					<p>modifier</p>
+				</div>
+			</div>
+		</div>
 		<div class="filtres">
 			<div class="tous"><p>Tous</p></div>
 			<div class="objets"><p>Objets</p></div>

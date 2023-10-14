@@ -47,6 +47,8 @@ table {
 	border-spacing: 0;
 }
 /** end reset css**/
+
+
 .body_sans_barremodif {
 	max-width: 1140px;
 	margin:auto;
@@ -54,19 +56,226 @@ table {
 	font-size: 14px;
 }
 
+.bground {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(63, 63, 63, 0.4);
+	margin-top: 0;
+}
+
+.bground .fa-xmark{
+	position: absolute;
+    top: 3px;
+    left: 470px;
+	cursor: pointer;
+}
+
+.bground .modale {
+	position: fixed;
+    top: 80px;
+    left: 420px;
+    background-color: white;
+    width: 500px;
+    height: 530px;
+    border-radius: 10px;
+}
+
+.bground .modale h3{
+	margin-right: auto;
+    margin-left: auto;
+    width: 22%;
+    margin-top: 20px;
+    font-family: 'Work Sans';
+}
+
+.project-modale {
+	display: flex;
+	height: 65%;
+	width: 70%;
+	border-bottom: 1px solid black;
+	margin-right: auto;
+    margin-left: auto;
+	flex-wrap: wrap;
+	margin-bottom: 25px;
+	padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.project-modale figcaption{
+	display: none;
+}
+
+.bground .modale button{
+	all: unset;
+	margin-left: 140px;
+}
+
+.bground .modale button p{
+	font-family: 'Syne';
+	font-size: 12px;
+	color: white;
+	background-color: #1D6154;
+	padding: 10px 15px;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+.bground .modale .project-modale figure{
+	width: 50px;
+	height: 80px;
+	margin-right: 10px;
+}
+
+.bground .modale .project-modale img {
+	width: 100%;
+	height: 100%;
+	margin: 25px;
+}
+
+.fa-trash-can{
+	position: relative;
+    bottom: 110px;
+    left: 55px;
+}
+
+.bground2 {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(63, 63, 63, 0.4);
+	margin-top: 0;
+}
+
+.blockModal2{
+	width: 70%;
+	height: 100%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+
+.bground2 .fa-xmark{
+	position: absolute;
+    top: 3px;
+    left: 470px;
+	cursor: pointer;
+}
+
+.bground2 .modale2 {
+	position: fixed;
+    top: 80px;
+    left: 420px;
+    background-color: white;
+    width: 500px;
+    height: 530px;
+    border-radius: 10px;
+}
+
+.bground2 .modale2 h3{
+	margin-right: auto;
+    margin-left: auto;
+    width: 27%;
+    margin-top: 20px;
+	margin-bottom: 15px;
+    font-family: 'Work Sans';
+}
+
+.ajoutPhoto{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	background-color: #E8F1F6;
+	padding-top: 30px;
+	margin-bottom: 15px;
+}
+
+.bground2 .modale2 .button3{
+	all: unset;
+	margin: 20px;
+}
+
+.bground2 .modale2 .button3 p{
+	font-family: 'Syne';
+	font-size: 12px;
+	color: white;
+	background-color: #1D6154;
+	padding: 10px 15px;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+.modale2 form{
+	display: flex;
+	flex-direction: column;
+	height: 20%;
+	width: 100%;
+	border-bottom: 1px solid black;
+	margin-right: auto;
+    margin-left: auto;
+	margin-bottom: 25px;
+	padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.modale2 form label, input {
+	margin-bottom: 15px;
+}
+
+.modale2 form label, select option{
+	font-family: 'Work Sans';
+	font-weight: 500;
+	size: 14px;
+}
+
+.bground2 .modale2 .button2{
+	all: unset;
+	margin-top: 5px;
+	margin-left: 65px;
+}
+
+.bground2 .modale2 .button2 p{
+	font-family: 'Syne';
+	font-size: 12px;
+	color: white;
+	background-color: #1D6154;
+	padding: 10px 15px;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+
 .barre_modification {
+	display: none;
 	background-color: black;
 	height: 45px;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+	margin: 0;
 }
 
 .modif_button{
 	display: flex;
 	margin-right: auto;
 	margin-left: auto;
-	width: 25%;
-	padding-top: 9px;
+	width: 8%;
+	padding-top: 15px;
+	cursor: pointer;
 }
 
 .fa-solid{
@@ -74,35 +283,8 @@ table {
 	padding: 7px 3px;
 }
 
-.first_modif:hover > .fa-solid{
-	color: black;
-}
-
-.first_modif{
-	display: flex;
+.modif_button p{
 	color: white;
-	padding: 5px 10px;
-}
-
-.first_modif:hover{
-	color: black;
-	background-color: white;
-	border: 1px solid white;
-	border-radius: 15px;
-	cursor: pointer;
-}
-
-.second_modif{
-	color: white;
-	padding: 5px 10px;
-}
-
-.second_modif:hover{
-	color: black;
-	background-color: white;
-	border: 1px solid white;
-	border-radius: 20px;
-	cursor: pointer;
 }
 
 header {
@@ -184,23 +366,27 @@ li:hover {
 	margin-bottom: 1em;
 }
 
-.test2{
-    height: 100%;
+.project_header{
+	display: flex;
+    margin-right: 30%;
+    margin-left: auto;
+    width: 26%;
 }
 
-.test:hover > .test2 {
-    height: 80%;
+.modif_button2{
+	display: none;
 }
 
-.barre_modification {
-    transform: scaleY(0);
+.flexBtn{
+	display: flex;
+	margin-left: 10px;
+	margin-top: 10px;
+	cursor: pointer;
 }
 
-.test:hover > .barre_modification{
-    transform: scaleY(1);
-    transition: transform 500ms ;
-    transform-origin: top 50%;
-    height: 40px;
+.fa-solid{
+	color: black;
+	padding: 7px 3px;
 }
 
 .filtres{

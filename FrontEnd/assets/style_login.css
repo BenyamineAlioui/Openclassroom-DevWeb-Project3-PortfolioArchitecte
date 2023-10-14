@@ -83,7 +83,7 @@ nav li {
     width: 379px
 }
 
-.login button{
+#send-input{
 	width: 179px;
 	height: 36px;
 	top: 529px;
@@ -92,6 +92,10 @@ nav li {
 	border: none;
 	background-color: #1D6154;
 	color: white;
+}
+
+#error-message{
+	display: none;
 }
 
 a, a:visited {
