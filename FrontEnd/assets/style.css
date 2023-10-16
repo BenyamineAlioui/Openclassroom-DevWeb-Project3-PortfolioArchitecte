@@ -71,15 +71,15 @@ table {
 
 .bground .fa-xmark{
 	position: absolute;
-    top: 3px;
-    left: 470px;
+    top: 12px;
+    left: 475px;
 	cursor: pointer;
 }
 
 .bground .modale {
 	position: fixed;
-    top: 80px;
-    left: 420px;
+    top: 50px;
+    left: 355px;
     background-color: white;
     width: 500px;
     height: 530px;
@@ -98,7 +98,7 @@ table {
 	display: flex;
 	height: 65%;
 	width: 70%;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #B3B3B3;
 	margin-right: auto;
     margin-left: auto;
 	flex-wrap: wrap;
@@ -139,10 +139,20 @@ table {
 	margin: 25px;
 }
 
+.project-modale figure div {
+	background-color: black;
+	width: 15px;
+	height: 20px;
+	position: relative;
+    bottom: 103px;
+    left: 57px;
+	cursor: pointer;
+}
 .fa-trash-can{
 	position: relative;
-    bottom: 110px;
-    left: 55px;
+    left: 3px;
+	color: white;
+	font-size: 10px;
 }
 
 .bground2 {
@@ -168,15 +178,22 @@ table {
 
 .bground2 .fa-xmark{
 	position: absolute;
-    top: 3px;
-    left: 470px;
+    top: 12px;
+    left: 472px;
+	cursor: pointer;
+}
+
+.fa-arrow-left{
+	position: relative;
+	top: 12px;
+	left: -45px;
 	cursor: pointer;
 }
 
 .bground2 .modale2 {
 	position: fixed;
-    top: 80px;
-    left: 420px;
+    top: 50px;
+    left: 355px;
     background-color: white;
     width: 500px;
     height: 530px;
@@ -198,38 +215,58 @@ table {
 	align-items: center;
 	width: 100%;
 	height: 100px;
-	background-color: #E8F1F6;
+	background-color: #E8F1F6; 
 	padding-top: 30px;
 	margin-bottom: 15px;
 }
 
-.bground2 .modale2 .button3{
-	all: unset;
-	margin: 20px;
+.fa-image{
+	color: #B9C5CC;
+	font-size: 60px;
+	margin-bottom: 27px;
 }
 
-.bground2 .modale2 .button3 p{
-	font-family: 'Syne';
-	font-size: 12px;
-	color: white;
-	background-color: #1D6154;
-	padding: 10px 15px;
-	width: 180px;
+.ajoutPhoto .button3 p{
+	font-family: 'Work Sans';
+	font-weight: 500;
+	font-size: 14px;
+	color: #306685;
+	background-color: #B3B3B3;
+	padding: 10px 0px;
+	width: 173px;
 	text-align: center;
-	border-radius: 60px ;
+	border-radius: 50px ;
+}
+
+.ajoutPhoto p{
+	font-family: 'Work Sans';
+	font-weight: 400;
+	font-size: 10px;
+}
+
+.bground2 .modale2 .button3{
+	all: unset;
+	margin: 7px;
 }
 
 .modale2 form{
 	display: flex;
 	flex-direction: column;
-	height: 20%;
+	height: 32%;
 	width: 100%;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #B3B3B3;
 	margin-right: auto;
     margin-left: auto;
 	margin-bottom: 25px;
 	padding-bottom: 40px;
     padding-top: 10px;
+}
+
+.modale2 form input, select {
+	margin-top: 10px;
+    border: #FFFFFF;
+    box-shadow: 0px 4px 14px 0px #00000017;
+    height: 51px;
 }
 
 .modale2 form label, input {
@@ -252,13 +289,16 @@ table {
 	font-family: 'Syne';
 	font-size: 12px;
 	color: white;
-	background-color: #1D6154;
+	background-color: #B3B3B3;
 	padding: 10px 15px;
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
 }
 
+.button1 p, .button2 p, .button3 p {
+	cursor: pointer;
+}
 
 .barre_modification {
 	display: none;
@@ -273,12 +313,12 @@ table {
 	display: flex;
 	margin-right: auto;
 	margin-left: auto;
-	width: 8%;
+	width: 10%;
 	padding-top: 15px;
 	cursor: pointer;
 }
 
-.fa-solid{
+.modif_icon1{
 	color: white;
 	padding: 7px 3px;
 }
@@ -384,7 +424,7 @@ li:hover {
 	cursor: pointer;
 }
 
-.fa-solid{
+.modif_icon2{
 	color: black;
 	padding: 7px 3px;
 }
