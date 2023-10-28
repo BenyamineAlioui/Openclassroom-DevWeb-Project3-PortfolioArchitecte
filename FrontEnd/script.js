@@ -76,12 +76,12 @@ const buttonModif1 = document.querySelector('.modif_button');
 const buttonModif2 = document.querySelector('.modif_button2');
 
 buttonModif1.addEventListener('click', () => {
-  const modale = document.querySelector('.bground');
+  const modale = document.querySelector('.modaleContent');
   modale.style.display = 'block';
 })
 
 buttonModif2.addEventListener('click', () => {
-  const modale = document.querySelector('.bground');
+  const modale = document.querySelector('.modaleContent');
   modale.style.display = 'block';
 })
 
@@ -90,6 +90,14 @@ buttonModif2.addEventListener('click', () => {
 const xmark = document.querySelector('.fa-xmark')
 
 xmark.addEventListener('click', () => {
+  location.reload(true);
+})
+
+//Fermeture de la modale au clic du bground
+
+const bground = document.querySelector('.bground')
+
+bground.addEventListener('click', () => {
   location.reload(true);
 })
 
@@ -130,21 +138,33 @@ fetch("http://localhost:5678/api/works")
       projectModale.appendChild(contentCorbeille);
 
       contentCorbeille.addEventListener("click", () => {
-        fetch(`http://localhost:5678/api/works/1`, {
-          method: "DELETE",
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Erreur de requête réseau");
-            }
-            return response.json(); 
-          })
-          .then((data) => {
-            projectModale.remove();
-          })
-          .catch((error) => {
-            console.error(error);
-          });
+        // Demander une confirmation avant de supprimer le projet
+        const confirmation = window.confirm("Êtes-vous sûr de vouloir supprimer ce projet ?");
+
+        if (confirmation) {
+          const token = sessionStorage.getItem("token");
+          if (token) {
+            fetch(`http://localhost:5678/api/works/${elements.id}`, {
+              method: "DELETE",
+              headers: {
+                'Authorization': `Bearer ${token}`
+              },
+              accept: "application/json",
+            })
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error("Erreur de requête réseau");
+                }
+                return response;
+              })
+              .then(data => {
+                projectModale.remove();
+              })
+              .catch(error => {
+                console.error(error);
+              });
+          }
+        }
       });
     }
   })
@@ -182,8 +202,8 @@ EditionMode()
 const boutonAjouter = document.querySelector(".button1")
 
 boutonAjouter.addEventListener('click', () => {
-  const modale = document.querySelector('.bground');
-  const modale2 = document.querySelector('.bground2');
+  const modale = document.querySelector('.modaleContent');
+  const modale2 = document.querySelector('.modaleContent2');
   modale.style.display = 'none';
   modale2.style.display = 'block';
 })
@@ -192,8 +212,8 @@ boutonAjouter.addEventListener('click', () => {
 const leftArrow = document.querySelector(".fa-arrow-left")
 
 leftArrow.addEventListener('click', () => {
-  const modale = document.querySelector('.bground');
-  const modale2 = document.querySelector('.bground2');
+  const modale = document.querySelector('.modaleContent');
+  const modale2 = document.querySelector('.modaleContent2');
   modale2.style.display = 'none';
   modale.style.display = 'block';
 })
@@ -206,6 +226,83 @@ xmark2.addEventListener('click', () => {
   location.reload(true);
 })
 
+//Fermeture de la modale au clic du bground2
 
+const bground2 = document.querySelector('.bground2')
 
+bground2.addEventListener('click', () => {
+  location.reload(true);
+})
 
+// Previsualiser photo
+
+const btnAddPhoto = document.querySelector('.button3');
+const inputPhoto = document.querySelector('#file');
+
+btnAddPhoto.addEventListener('change', () => {
+  const addPhoto = document.querySelector('.ajoutPhoto');
+  const addPhotoIcon = document.querySelector('.fa-image');
+  const addPhotoInstructions = document.querySelector('.instruction');
+
+  console.log(inputPhoto.files.length)
+  if (inputPhoto.files.length > 0) {
+    const photo = inputPhoto.files[0]
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      const img = new Image()
+      img.src = e.target.result
+      img.classList.add("uploaded-photo")
+      addPhoto.appendChild(img)
+    }
+
+    reader.readAsDataURL(photo)
+    addPhotoIcon.style.display = "none"
+    inputPhoto.style.display = "none"
+    addPhotoInstructions.style.display = "none"
+    btnAddPhoto.style.display = "none"
+  }
+});
+
+// Envoi des nouveaux projets
+
+const titleInput = document.getElementById('title');
+const categorySelect = document.querySelector('select');
+const fileInput = document.getElementById('file');
+const addButton = document.querySelector('.button2');
+
+addButton.addEventListener('click', () => {
+  const title = titleInput.value;
+  const category = categorySelect.value;
+  const imageFile = fileInput.files[0];
+
+  const formData = new FormData();
+  formData.append('title', title);
+  formData.append('category', category);
+  formData.append('image', imageFile);
+
+  const token = sessionStorage.getItem("token");
+  if (token) {
+    fetch('http://localhost:5678/api/works', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Authorization': `Bearer ${token}`
+      },
+      accept: 'application/json',
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erreur de requête réseau');
+        }
+        return response.json();
+      })
+      .then(data => {
+        alert('Projet ajouté avec succès !');
+        location.reload(true);
+      })
+      .catch(error => {
+        console.error(error);
+        alert('Erreur lors de l\'ajout du projet.');
+      });
+  }
+});

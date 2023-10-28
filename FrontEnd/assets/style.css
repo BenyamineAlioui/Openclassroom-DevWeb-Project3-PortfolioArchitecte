@@ -48,16 +48,14 @@ table {
 }
 /** end reset css**/
 
+/* Modale 1 */
 
-.body_sans_barremodif {
-	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
-	font-size: 14px;
-}
-
-.bground {
+.modaleContent{
 	display: none;
+	position: fixed;
+	
+}
+.bground {
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -69,54 +67,54 @@ table {
 	margin-top: 0;
 }
 
-.bground .fa-xmark{
+.fa-xmark{
 	position: absolute;
     top: 12px;
-    left: 475px;
+    left: 394px;
 	cursor: pointer;
 }
 
-.bground .modale {
+.modale {
 	position: fixed;
-    top: 50px;
-    left: 355px;
+    top: 100px;
+    left: 465px;
     background-color: white;
-    width: 500px;
-    height: 530px;
+    width: 430px;
+    height: 460px;
     border-radius: 10px;
+	z-index: 2;
 }
 
-.bground .modale h3{
+.modale h3{
 	margin-right: auto;
     margin-left: auto;
-    width: 22%;
+    width: 25%;
     margin-top: 20px;
     font-family: 'Work Sans';
 }
 
 .project-modale {
 	display: flex;
-	height: 65%;
-	width: 70%;
-	border-bottom: 1px solid #B3B3B3;
-	margin-right: auto;
+    height: 53%;
+    width: 78%;
+    border-bottom: 1px solid #B3B3B3;
+    margin-right: auto;
     margin-left: auto;
-	flex-wrap: wrap;
-	margin-bottom: 25px;
-	padding-bottom: 40px;
-    padding-top: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 29px;
+    padding-bottom: 78px;
 }
 
 .project-modale figcaption{
 	display: none;
 }
 
-.bground .modale button{
+.modale button{
 	all: unset;
-	margin-left: 140px;
+	margin-left: 110px;
 }
 
-.bground .modale button p{
+.modale button p{
 	font-family: 'Syne';
 	font-size: 12px;
 	color: white;
@@ -127,13 +125,14 @@ table {
 	border-radius: 60px ;
 }
 
-.bground .modale .project-modale figure{
+.project-modale figure{
 	width: 50px;
 	height: 80px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
-.bground .modale .project-modale img {
+.project-modale img {
 	width: 100%;
 	height: 100%;
 	margin: 25px;
@@ -155,8 +154,14 @@ table {
 	font-size: 10px;
 }
 
-.bground2 {
+/* Modale 2 */
+
+.modaleContent2{
 	display: none;
+	position: fixed;
+	
+}
+.bground2 {
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -168,18 +173,21 @@ table {
 	margin-top: 0;
 }
 
-.blockModal2{
-	width: 70%;
-	height: 100%;
-	margin-left: auto;
-    margin-right: auto;
+.modale2 {
+	position: fixed;
+    top: 100px;
+    left: 465px;
+    background-color: white;
+    width: 430px;
+    height: 460px;
+    border-radius: 10px;
+	z-index: 2;
 }
 
-
-.bground2 .fa-xmark{
+.xmark2{
 	position: absolute;
     top: 12px;
-    left: 472px;
+    left: 394px;
 	cursor: pointer;
 }
 
@@ -190,23 +198,20 @@ table {
 	cursor: pointer;
 }
 
-.bground2 .modale2 {
-	position: fixed;
-    top: 50px;
-    left: 355px;
-    background-color: white;
-    width: 500px;
-    height: 530px;
-    border-radius: 10px;
-}
-
-.bground2 .modale2 h3{
+.modale2 h3{
 	margin-right: auto;
     margin-left: auto;
-    width: 27%;
-    margin-top: 20px;
-	margin-bottom: 15px;
+    width: 31%;
+    margin-top: 7px;
+    margin-bottom: 15px;
     font-family: 'Work Sans';
+}
+
+.blockModal2{
+	width: 70%;
+	height: 100%;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .ajoutPhoto{
@@ -226,29 +231,37 @@ table {
 	margin-bottom: 27px;
 }
 
-.ajoutPhoto .button3 p{
+.ajoutPhoto .button3{
+	all: unset;
+	margin: 16px;
+}
+
+.button3 label{
 	font-family: 'Work Sans';
 	font-weight: 500;
 	font-size: 14px;
 	color: #306685;
 	background-color: #B3B3B3;
-	padding: 10px 0px;
-	width: 173px;
+	padding: 10px 32px;
 	text-align: center;
 	border-radius: 50px ;
 }
 
-.ajoutPhoto p{
+.button3 input{
+	display: none;
+}
+
+.instruction{
 	font-family: 'Work Sans';
 	font-weight: 400;
 	font-size: 10px;
 }
 
-.bground2 .modale2 .button3{
-	all: unset;
-	margin: 7px;
+.uploaded-photo {
+	position: fixed;
+    top: 155px;
+    max-height: 129px;
 }
-
 .modale2 form{
 	display: flex;
 	flex-direction: column;
@@ -258,7 +271,7 @@ table {
 	margin-right: auto;
     margin-left: auto;
 	margin-bottom: 25px;
-	padding-bottom: 40px;
+	padding-bottom: 15px;
     padding-top: 10px;
 }
 
@@ -279,13 +292,12 @@ table {
 	size: 14px;
 }
 
-.bground2 .modale2 .button2{
+.button2{
 	all: unset;
-	margin-top: 5px;
-	margin-left: 65px;
+	margin-left: 32px;
 }
 
-.bground2 .modale2 .button2 p{
+.button2 p{
 	font-family: 'Syne';
 	font-size: 12px;
 	color: white;
@@ -299,6 +311,8 @@ table {
 .button1 p, .button2 p, .button3 p {
 	cursor: pointer;
 }
+
+/* Reste du code */
 
 .barre_modification {
 	display: none;
@@ -327,10 +341,17 @@ table {
 	color: white;
 }
 
+.body_sans_barremodif {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 20px 0px 50px 0px;
+	margin: 20px 35px 50px 35px;
 }
 section {
 	margin: 50px 0
@@ -381,6 +402,10 @@ li:hover {
 #introduction {
 	display: flex;
 	align-items: center;
+	width: 87%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 29px;
 }
 #introduction figure {
 	flex: 1
@@ -392,7 +417,8 @@ li:hover {
 }
 
 #introduction article {
-	flex: 1
+	flex: 1;
+	padding-right: 68px;
 }
 #introduction h2 {
 	margin-bottom: 1em;
@@ -408,7 +434,7 @@ li:hover {
 
 .project_header{
 	display: flex;
-    margin-right: 30%;
+    margin-right: 33%;
     margin-left: auto;
     width: 26%;
 }
@@ -456,11 +482,13 @@ li:hover {
 }
 
 .gallery {
-	width: 100%;
+	width: 75%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	margin-right: auto;
+    margin-left: auto;
 }
 
 .gallery img {
