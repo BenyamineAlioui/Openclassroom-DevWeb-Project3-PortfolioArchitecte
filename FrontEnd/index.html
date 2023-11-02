@@ -23,9 +23,9 @@
 		<div class="modale">
 			<i class="fa-solid fa-xmark"></i>
 			<h3>Galerie photo</h3>
-			<div class="project-modale"></i></div>
+			<div class="project-modale"></div>
 			<button class="button1">
-				<p>Ajouter une photo</p>
+				<span>Ajouter une photo</span>
 			</button>
 		</div>
 	</section>
@@ -39,8 +39,8 @@
 				<div class="ajoutPhoto">
 					<i class="fa-regular fa-image fa-xl"></i>
 					<button class="button3">
-						<input type="file" id="file" accepte="image/jpeg image/png">
-						<label for="file">+Ajouter photo</label>
+							<input type="file" id="file" accept="image/jpeg, image/png">
+							<label for="file">+Ajouter photo</label>
 					</button>
 					<p class="instruction">jpg. png : 4mo max</p>
 				</div>
@@ -48,15 +48,15 @@
 					<label for="title">Titre</label>
 					<input type="text" name="title" id="title">
 					<label for="categories">Catégorie</label>
-					<select>
-						<option value="rien"></option>
-						<option value="1">objets</option>
-						<option value="2">appartements</option>
-						<option value="3">hotels & restaurants</option>
+					<select id="categories">
+						<option value="rien" label="rien"></option>
+						<option value="1" label="objets">objets</option>
+						<option value="2" label="appartements">appartements</option>
+						<option value="3" label="hotels et restaurants">hotels & restaurants</option>
 					</select>
 				</form>
 				<button class="button2">
-					<p>Valider</p>
+					<span>Valider</span>
 				</button>
 			</div>
 		</div>
